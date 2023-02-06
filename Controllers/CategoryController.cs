@@ -43,7 +43,7 @@ namespace ExpenseTracker.Controllers
         }
 
         // GET: Category/AddOrEdit
-        public IActionResult AddOrEdit(int id=0)
+        public IActionResult AddOrEdit(int id = 0)
         {
             if (id == 0)
                 return View(new Category());
