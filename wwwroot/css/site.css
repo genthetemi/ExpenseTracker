@@ -26,6 +26,23 @@ body {
 .e-bigger {
     font-size: x-large;
 }
+/*BradCrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+/*Button*/
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow:none;
+}
+
+/*HyperLink*/
+.no-a-decoration, no-a-decoration:hover{
+    text-decoration:none;
+    color:inherit;
+}
+
 /*Grid*/
 .e-grid {
     border: 0;
@@ -61,6 +78,8 @@ body {
         padding: 0px 10px;
     }
 
+
+/*Radio Button*/
 .e-btn-group.custom-rbt-group {
     width: 100%;
 }
