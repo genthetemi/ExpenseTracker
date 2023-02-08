@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExpenseTracker.Models;
+using ExpenseTracker.Models;
 
 namespace ExpenseTracker.Controllers
 {
@@ -26,6 +27,7 @@ namespace ExpenseTracker.Controllers
                         Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
 
+
         // GET: Category/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
         {
@@ -33,6 +35,7 @@ namespace ExpenseTracker.Controllers
                 return View(new Category());
             else
                 return View(_context.Categories.Find(id));
+
         }
 
         // POST: Category/AddOrEdit
@@ -54,9 +57,6 @@ namespace ExpenseTracker.Controllers
             return View(category);
         }
 
-        
-
-        
 
         // POST: Category/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -72,7 +72,7 @@ namespace ExpenseTracker.Controllers
             {
                 _context.Categories.Remove(category);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
