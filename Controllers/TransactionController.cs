@@ -19,7 +19,7 @@ namespace ExpenseTracker.Controllers
         }
 
         // GET: Transaction
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> IndexAsync()
         {
             var applicationDbContext = _context.Transactions.Include(t => t.Category);
             return View(await applicationDbContext.ToListAsync());
@@ -40,7 +40,7 @@ namespace ExpenseTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598. 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
+        public async Task<IActionResult> AddOrEditAsync([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +49,7 @@ namespace ExpenseTracker.Controllers
                 else
                     _context.Update(transaction);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             PopulateCategories();
             return View(transaction);
@@ -58,7 +58,7 @@ namespace ExpenseTracker.Controllers
         // POST: Transaction/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmedAsync(int id)
         {
             if (_context.Transactions == null)
             {
@@ -71,7 +71,7 @@ namespace ExpenseTracker.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(IndexAsync));
         }
 
 
