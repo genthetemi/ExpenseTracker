@@ -19,7 +19,7 @@ namespace ExpenseTracker.Controllers
         }
 
         // GET: Transaction
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Transactions.Include(t => t.Category);
             return View(await applicationDbContext.ToListAsync());
@@ -49,7 +49,7 @@ namespace ExpenseTracker.Controllers
                 else
                     _context.Update(transaction);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             PopulateCategories();
             return View(transaction);
@@ -71,7 +71,7 @@ namespace ExpenseTracker.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(IndexAsync));
+            return RedirectToAction(nameof(Index));
         }
 
 

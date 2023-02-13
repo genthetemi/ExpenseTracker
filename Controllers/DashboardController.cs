@@ -5,6 +5,9 @@ using Syncfusion.EJ2.Linq;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Syncfusion.Data;
+using Syncfusion.EJ2;
+using Syncfusion.Licensing;
 
 namespace ExpenseTracker.Controllers
 {
@@ -12,7 +15,7 @@ namespace ExpenseTracker.Controllers
     {
 
         private readonly ApplicationDbContext _context;
-
+        
         public  DashboardController(ApplicationDbContext context)
         {
                     _context = context;
@@ -20,7 +23,7 @@ namespace ExpenseTracker.Controllers
     
 
      
-        public async Task<ActionResult> IndexAsync()
+        public async Task<ActionResult> Index()
         {
             //last 7 days
             DateTime StartDate = DateTime.Today.AddDays(-6);
@@ -60,9 +63,6 @@ namespace ExpenseTracker.Controllers
                     formattedAmount = k.Sum(j => j.Amount).ToString("C0"),
                 })
                 .ToList();
-
-
-
 
             return View();
         }

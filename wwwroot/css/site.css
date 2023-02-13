@@ -134,7 +134,7 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
 
 .custom-rbt-group label.e-btn{
     box-shadow: none !important;
-    border: solid #fff;
+    border: 1px solid #fff;
     background-color: rgb(34 43 51);
     color: #fff;
 }
@@ -158,7 +158,7 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
     background-color: #1a222b;
 }
 
-     .widget.summary > div:first-child{
+     .widget.summary > div:first-child {
          background-color: #222b33;
          padding: 1rem;
          border-top-left-radius: 1rem;
@@ -169,16 +169,16 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
              font-weight: bold;
          }
 
-      .widget.income > div:first-child{
+      .widget.income > div:first-child {
           color: #65da41;
       }
 
-      .widget.expense > dic:first-child {
+      .widget.expense > div:first-child {
           color: #ff4e48;
       }
 
       .widget.balance > div:first-child {
-          color: #22aa1f;
+          color: #22aa1fff;
       }
 
       .widget.chart {
