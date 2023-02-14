@@ -174,7 +174,7 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
       }
 
       .widget.expense > div:first-child {
-          color: #ff4e48;
+          color: #ff0000;
       }
 
       .widget.balance > div:first-child {
