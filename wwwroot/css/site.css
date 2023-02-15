@@ -21,7 +21,7 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #12161d;
-  color: #fff;
+  color: #ffff;
 }
 .e-bigger {
     font-size: x-large;
@@ -137,6 +137,7 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
     border: 1px solid #fff;
     background-color: rgb(34 43 51);
     color: #fff;
+
 }
 
 .e-btn-group.custom-rbt-group input:checked + label.btn{
@@ -153,34 +154,41 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
 }
 
 /*Widget*/
-.widget{
-    border-radius: 1rem;
+.widget {
+    border-radius: 2rem;
     background-color: #1a222b;
+    border-top-right-radius: 2rem;
+    padding-left: 15px;
 }
 
-     .widget.summary > div:first-child {
-         background-color: #222b33;
-         padding: 1rem;
-         border-top-left-radius: 1rem;
-         border-bottom-left-radius: 1rem;
-     }
+    .widget.summary > div:first-child {
+        background-color: rgba(75,82,85,0.24);
+        padding: 15px;
+        border-top-left-radius: 3rem;
+        border-bottom-left-radius: 8rem;
+        border-top-right-radius: 3rem;
+       
+    }
 
          .widget.summary > div:first-child i {
-             font-weight: bold;
+             font-weight: bolder;
+             
          }
 
-      .widget.income > div:first-child {
-          color: #65da41;
-      }
+    .widget.income > div:first-child {
+        color: #65da41; 
+    }
 
-      .widget.expense > div:first-child {
-          color: #ff0000;
-      }
+    .widget.expense > div:first-child {
+        color: #ff0000;
+    }
 
-      .widget.balance > div:first-child {
-          color: #22aa1fff;
-      }
+    .widget.balance > div:first-child {
+        color: #0fff;
+    }
 
       .widget.chart {
-          padding: 5px;
+          padding: 1px;
       }
+
+    
