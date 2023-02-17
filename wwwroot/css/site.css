@@ -190,5 +190,9 @@ e-btn-group.custom-rbt-group input:checked + label.e-btn {
       .widget.chart {
           padding: 1px;
       }
+/*Doughnut and Spline Chart*/
+      #spline-chart {
+    height: 350px;
+    margin-top: 20px;
+      }
 
-    

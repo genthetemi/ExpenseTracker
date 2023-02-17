@@ -102,11 +102,16 @@ namespace ExpenseTracker.Controllers
                                       select new
                                       {
                                           day = day,
-                                          Income = income == null ? 0 : income.income,
-                                          Expense = expense == null ? 0 : expense.expense,
+                                          income = income == null ? 0 : income.income,
+                                          expense = expense == null ? 0 : expense.expense,
 
                                       };
-
+            //Recent Transactions
+            ViewBag.RecentTransactions = await _context.Transactions
+                .Include(i => i.Category)
+                .OrderByDescending(j => j.Date)
+                .Take(5)
+                .ToListAsync();
 
             return View();
         }
@@ -117,7 +122,8 @@ namespace ExpenseTracker.Controllers
         public string day;
         public int Income;
         public int Expense;
-
+        internal int income;
+        internal int expense;
     }
 
 }
