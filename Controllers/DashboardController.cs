@@ -8,7 +8,7 @@ using System.Linq;
 using Syncfusion.Data;
 using Syncfusion.EJ2;
 using Syncfusion.Licensing;
-
+ 
 namespace ExpenseTracker.Controllers
 {
     public class DashboardController : Controller
