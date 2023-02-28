@@ -13,6 +13,8 @@ namespace ExpenseTracker.Models
 
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         
     }
 }

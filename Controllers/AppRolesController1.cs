@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ExpenseTracker.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
 
     public class AppRolesController : Controller
     {
